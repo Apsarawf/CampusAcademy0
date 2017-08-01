@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>计时器</title>
+	<style>
+		div{margin:0 auto;width: 450px;padding-top: 200px;font-size: 40px;color: #065478;font-weight: bold;}
+	</style>
+	<script type="text/javascript">
+	function toDouble(a)
+	{
+		if(a<10)
+		{
+			return '0'+a;
+		}
+		else
+		{
+			return ''+a;
+		}
+	}
+		window.onload=function()
+		{
+			var oImg=document.getElementsByTagName("img");
+			function getTime()
+			{
+				var oDate = new Date();
+				var str =toDouble(oDate.getHours())+toDouble(oDate.getMinutes())+toDouble(oDate.getSeconds());
+				for(var i=0;i<oImg.length;i++)
+				{
+					oImg[i].src='images/'+str.charAt(i)+'.png';
+				}
+			}
+			setInterval(getTime, 1000);
+			getTime();
+        }
+	</script>
+</head>
+<body style="background: #888888;">
+<div>
+	<img src="images/0.png">
+	<img src="images/0.png">
+	时
+	<img src="images/0.png">
+	<img src="images/0.png">
+	分
+	<img src="images/0.png">
+	<img src="images/0.png">
+	秒
+</div>
+
+</body>
+</html>

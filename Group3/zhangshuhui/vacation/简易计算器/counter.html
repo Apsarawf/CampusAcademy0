@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>萌萌哒的计算器</title>
+	<style type="text/css">
+		*{ margin: 0;padding: 0;font-family: "Consolas", "Menlo", "Courier", monospace; }
+		span{display: block;}
+		body{background: #f0f2f1;}
+
+		#box{ width: 380px; height: 600px;margin: 0 auto; box-shadow: 0 0 10px #888 }
+		#top{ width: inherit; height: 200px;background: url(1.jpg)no-repeat;background-size: cover;position: relative; }
+		#top input{ width: 368px; height:80px;position: absolute;color: #000;font-size: 40px;text-align: right;line-height: 80px;cursor: text; padding-right: 10px;background: none;border: none;}
+		#main{ width: inherit;height: 400px;background: url(2.jpeg)no-repeat;background-size: cover;}
+		#main span{width:94px;height: 80px;border-right: 1px solid #dff0d8;border-top: 1px solid #dff0d8;
+		float: left;;font-size: 38px;text-align: center;line-height: 80px; cursor: pointer;font-weight: bold;}
+	</style>
+	<script src="counter.js" type="text/javascript" rel="stylesheet"></script>
+</head>
+<body>
+<div id="box">
+	<div id="top">
+		<input id="screen0" type="text" style="margin-top: 20px;" disabled/>
+        <input id="screen1" type="text" style="margin-top: 120px;" disabled/>
+	</div>
+	<div id="main">
+		<span class="div1"></span>
+		<span class="div1">Del</span>
+		<span class="div1">%</span>
+		<span class="div1">/</span>
+
+		<span class="div2">7</span>
+		<span class="div2">8</span>
+		<span class="div2">9</span>
+		<span class="div1">*</span>
+
+		<span class="div2">4</span>
+		<span class="div2">5</span>
+		<span class="div2">6</span>
+		<span class="div1">-</span>
+
+		<span class="div2">1</span>
+		<span class="div2">2</span>
+		<span class="div2">3</span>
+		<span class="div1">+</span>
+
+		<span class="div2">0</span>
+		<span class="div2">.</span>
+		<span class="div1">AC</span>
+		<span class="div3">=</span>
+	</div>
+</div>
+</body>
+</html>

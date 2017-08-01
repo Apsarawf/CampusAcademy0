@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<title>practice</title>
+	<style>
+		input{ background: white;float: right; }
+		p{ width: 200px; margin-top: -22px; }
+		.active { background: blue; }
+		div{ width: 200px;height: 200px; display: none;}
+		.box1{ background: red; }
+		.box2{ background: yellow; }
+		.box3{ background: green; }
+	</style>
+	 <script type="text/javascript">
+        window.onload=function ()
+        {
+        	var aBtn=document.getElementsByTagName('input');
+        	var aDiv=document.getElementsByTagName('div');
+        	var i=0;
+        	for(i=0;i<aBtn.length;i++)
+        	{
+        		aBtn[i].index=i;
+        		aBtn[i].onclick=function()
+        		{
+        			for (i=0;i<aBtn.length;i++)
+        			{
+        				aBtn[i].className='';
+        				aDiv[i].style.display='none';
+        			}
+        			aDiv[this.index].style.display='block';
+        			this.className='active';
+        		};
+        	}
+        }
+     </script>
+</head>
+<body>
+    <div style="display: block;" class="box1">love</div>
+    <div class="box2">like</div>
+    <div class="box3">hate</div>
+    <p>
+    <input class="active" type="button" value="1">
+    <input type="button" value="2">
+    <input type="button" value="3">
+    </p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>下拉菜单</title>
+	<link rel="stylesheet" type="text/css" href="menu.css">
+	<script type="text/javascript">
+	window.onload = function() {
+    	var oDiv = document.getElementById('drop');
+    	var oH2 = oDiv.getElementsByTagName('h2')[0];
+
+    	oH2.onclick = showHideUl;
+	}
+
+	function showHideUl() {
+    	var oDiv = document.getElementById('drop');
+    	var oUl = oDiv.getElementsByTagName('ul')[0];
+    	var oH2 = oDiv.getElementsByTagName('h2')[0];
+
+    	if (oUl.style.display === 'none') {
+       		oUl.style.display = 'block';
+        	oH2.className = 'up';
+    	} else {
+        	oUl.style.display = 'none';
+        	oH2.className = 'down';
+    	}
+	}
+	</script>
+</head>
+<body>
+	<div id="drop" class="down_list">
+        <h2 class="up">请选择你想了解的英雄</h2>
+        <ul>
+            <li><a href="#">李白</a></li>
+            <li><a href="#">露娜</a></li>
+            <li><a href="#">孙悟空</a></li>
+            <li><a href="#">小乔</a></li>
+            <li><a href="#">王昭君</a></li>
+            <li><a href="#">孙膑</a></li>
+        </ul>
+    </div>
+</body>
+</html>

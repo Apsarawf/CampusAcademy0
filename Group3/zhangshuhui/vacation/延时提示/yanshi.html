@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>延时提示</title>
+	<style>
+		#wa{width: 100px;height: 50px;font-size: 30px;color: #fff;background: #000;}
+		#wb{width: 700px;height: 700px;background: url(libai.jpeg) no-repeat;display: none;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oWa = document.getElementById('wa');
+			var oWb = document.getElementById('wb');
+			var timer = null;
+
+			oWa.onmouseover=function(){
+				setTimeout(show,500);
+			}
+			oWa.onmouseout=function(){
+				timer=setTimeout(off,500);
+			}
+			oWb.onmouseover=function(){
+				clearTimeout(timer);
+			}
+			oWb.onmouseout=function(){
+				setTimeout(off,500);
+			}
+			function show(){
+				oWb.style.display='block';
+			}
+			function off(){
+				oWb.style.display='none';
+			}
+		}
+	</script>
+</head>
+<body>
+<div id="wa">李白</div>
+<div id="wb"></div>
+</body>
+</html>

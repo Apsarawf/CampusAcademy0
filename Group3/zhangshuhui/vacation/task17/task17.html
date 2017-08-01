@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+    
+    <style type="text/css">
+      #aqi-chart-wrap{ height: 620px;width: 1240px; border: 1px solid #000; position: relative;}
+      #aqi-chart-wrap li{ position: absolute; bottom: 0;background: red; width: 10px;}
+      #city-select{ border: 1px solid #000;font-size: 12px;color: #512a54;width: 50px; }
+      ul,li,p{padding: 0px;margin: 0px;}
+      li{list-style: none;}
+      #citys{ width: 50px; border: 1px solid #000; display: none;}
+      #citys li{ font-size: 12px; }
+      #time-select li{ float: left;width: 50px;border: 1px solid #000;font-size: 14px; color: #000;margin-left: 50px;text-align: center; }
+    </style>
+  </head>
+<body>
+  <fieldset id="form-gra-time">
+    <legend>请<b>先</b>选择日期粒：</legend>
+    <ul id="time-select">
+      <li>日</li>
+      <li>周</li>
+      <li>月</li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>请选择查看的城市：</legend>
+    <p id="city-select">北京</p>
+    <ul id="citys">
+        <li>北京</li>
+        <li>上海</li>
+        <li>深圳</li>
+        <li>重庆</li>
+        <li>成都</li>
+      </ul>
+  </fieldset>
+
+  <ul id="aqi-chart-wrap">
+    <!--
+    <li></li>
+    <li></li>
+    -->
+  </ul>
+  <script src="task17.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>柱状图实现尝试</title>
+	<style type="text/css">
+		#div1{ width: 400px;height: 400px; margin:0 auto; border-bottom: 1px solid #000;border-left: 1px solid #000;position: relative;}
+		li{ list-style: none;width: 10px;height: 200px;background-color: red;margin-left: 2px; position: absolute;bottom: 0;margin-left: 10px;}
+
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var num = new Array();
+		var oUl1 = document.getElementById('ul1');
+		var aLi = oUl1.getElementsByTagName('li');
+
+		for(var i = 0;i<aLi.length;i++){
+			aLi[i].style.left = (20*i+10)+'px';
+
+			num[i]=Math.ceil(Math.random() * 400);
+			aLi[i].style.height = num[i]+'px';
+		}
+	}
+
+
+	</script>
+</head>
+<body>
+<div id="div1">
+<ul id="ul1">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+</div>
+</body>
+</html>
