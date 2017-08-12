@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>表单验证</title>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		.box{ height: 180px;width: 350px;margin: 0 auto; font-size: 14px;font-family: "宋体";margin-top: 100px;border: 1px solid #000;padding-top: 10px;padding-left: 10px;}
+		.box span{ font-size: 10px;font-family: "宋体"; }
+        .state1{ color:#aaa; }
+        .state2{ color:red;}
+        .state3{ color:green; }
+		.btn{ width: 300px;height: 30px;font-size: 16px;line-height: 30px;font-family: "宋体" ;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			var ok1 = false;
+			var ok2 = false;
+			var ok3 = false;
+			var ok4 = false;
+
+			//验证用户名
+			$('input[name="username"]').blur(function(){
+				if($(this).val().length >=3 && $(this).val().length<=12 && $(this).val()!=''){
+					$(this).next().text('输入成功').removeClass('state1 state2').addClass('state3');
+					ok1=true;
+				}else{
+					$(this).next().text('用户名应该为3-20位之间').removeClass('state1 state3').addClass('state2');
+				}
+			});
+
+			//验证密码
+			$('input[name="password"]').blur(function(){
+				if($(this).val().length>=6 && $(this).val().length<=20 && $(this).val()!='' && /^[A-Za-z0-9_-]+$/.test($(this).val()) ){
+					$(this).next().text('输入成功').removeClass('state1 state2').addClass('state3');
+					ok2=true;
+				}else{
+					$(this).next().text('6~20位六位英文或数字').removeClass('state1 state3').addClass('state2');
+				}
+			});
+
+			//确认密码
+			$('input[name="repass"]').blur(function(){
+				if($(this).val() == $('input[name="password"]').val()){
+					$(this).next().text('输入成功').removeClass('state1 state2').addClass('state3');
+					ok3 = true;
+				}else{
+					$(this).next().text('两次密码不一致').removeClass('state1 state3').addClass('state2');
+				}
+			});
+
+			//验证邮箱
+			$('input[name="email"]').blur(function(){
+				if($(this).val().search(/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/)==-1){
+					$(this).next().text("email格式不正确").removeClass('state1 state3').addClass('state2');
+				}else{
+					$(this).next().text('输入成功').removeClass('state1 state2').addClass('state3');
+					ok4 = true;
+				}
+			});
+
+			//所有验证通过后方可提交
+
+			$('input[name="btn"]').click(function(){
+				if(ok4 && ok3 && ok2 && ok1){
+					alert("恭喜你，提交成功！");
+					window.location.href = 'http://www.4399.com/';
+				}
+				else{
+					alert("提交错误！");
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+<div class="box">
+<img src="">
+    用 户 名:<input type="text" name="username">
+                <span class='state1'>用户名应该为3-20位之间</span><br/><br/>
+    密　　码:<input type="password" name="password">
+                <span class='state1'>6~20位六位英文或数字</span><br/><br/>
+    确认密码:<input type="password" name="repass">
+                <span class='state1'>确认密码</span><br/><br/>
+    邮　　箱:<input type="text" name="email">
+                <span class='state1'>请输入邮箱</span><br/><br/> 
+    <input type="button" name="btn" value="确认提交" class="btn">
+</div>
+</body>
+</html>

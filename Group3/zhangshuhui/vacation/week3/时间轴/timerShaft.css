@@ -1,0 +1,93 @@
+*{
+	padding: 0;margin: 0;
+}
+li{list-style: none;}
+.header{
+
+	width: 900px;
+	margin: 0 auto;
+	font-style: 14px;
+	font-family: "楷体";
+}
+.header img{ height: 160px;width: 120px; }
+.header p{ width: 740px;margin-left: 30px; float: right;}
+.header p span{
+	font-size: 36px;
+}
+.box{
+	width: 900px;
+	margin: 20px auto;
+	height: auto;
+}
+.year{
+	width: 100px;
+	float: left;
+	
+}
+.event{
+	width:760px;
+	float: right;
+	background: url(1.png) repeat-y 60px;
+}
+.event div{
+	margin-bottom: 50px;
+}
+.year li{
+	background: #eee;
+	width: 80px;
+	line-height: 32px;
+	font-size: 20px;
+	font-family: Arial;
+	border: 1px solid #fff;
+	text-align: center;
+	position: relative;
+}
+.year li label{	cursor: pointer;}
+.year li span{
+	color:  #eee;
+	position: absolute;
+	right: 0px;
+}
+.year .active{
+	background: #0066FF;
+	color: #fff;
+}
+.year .active span{
+	color: #0066FF;
+	right: -6px;
+}
+#zero,#one, #two,#three{
+	font-family: "YouYuan";
+	color: #0066FF;
+	font-size: 30px;
+	font-style: italic;
+}
+#zero span,#one span,#two span,#three span{
+	display: inline-block; width: 16px;height: 16px;
+	border-radius: 10px;
+	background: #0066FF;
+	margin-left: 55px;
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+.event li i{
+	font-size: 12px;
+	display: inline-block;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.event li p{
+	width: 600px;
+	background: #eee;
+	font-style: 14px;
+	font-family: "宋体";
+	padding: 5px;
+	position: relative;
+	margin-top: -20px;
+	margin-left: 70px;
+}
+.event li p span{
+	color: #eee;
+	position: absolute;
+	left: -8px;
+}

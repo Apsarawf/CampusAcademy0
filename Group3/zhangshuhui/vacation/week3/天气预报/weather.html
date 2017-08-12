@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="weather.js"></script>
+
+	<title>天气预报哟</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		.bigBox{ width: 400px;margin: 18px auto;height: auto;background: #808f7c;padding: 40px; }
+		.bigBox h2{text-align: center;margin-bottom: 30px;}
+		#list { float: left;}
+		#list li{ line-height: 28px;font-style: 14px;background: #91b493;width: 100px; list-style: none;text-align: center;border-bottom: 1px solid #808f7c;}
+		#list li label{ cursor: pointer; }
+		#box{ border: 1px solid #E3916E; height: 300px;width: 240px;overflow: hidden; background: #F8C3CD; border-radius: 10px;margin: 0 auto;}
+		.dayWea{height: 300px;width: 240px; text-align: center;}
+		.one{margin-bottom: 18px; }
+		.dayWea p{font-size: 18px;margin-top: 18px;}
+		.dayWea img{ width: 60px; height: 60px; }
+	</style>
+</head>
+<body>
+<div class="bigBox">
+	<h2>重庆未来十天天气查询卡</h2>
+	<ul id="list"></ul>
+	<div id="box">
+	</div>
+</div>
+</body>
+</html>

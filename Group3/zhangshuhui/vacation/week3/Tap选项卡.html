@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Tap选项卡</title>
+	<style type="text/css">
+		#div1 div{ width:200px; height:200px; border:1px red solid; display:none;}
+		.active{ background:red;}
+	</style>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	
+	$('#div1').find('input').click(function(){
+		
+		$('#div1').find('input').removeClass('active');
+		$('#div1').find('div').css('display','none');
+		
+		$(this).addClass('active');
+		
+		$('#div1').find('div').eq( $(this).index() ).css('display','block');
+		
+	});
+	
+});
+	</script>
+</head>
+<body>
+<div id="div1">
+	<input class="active" type="button" value="1"  />
+    <input type="button" value="2" />
+    <input type="button" value="3" />
+    <div style="display:block;">我听见了你的声音<br/>也藏着颗不敢见的心<br>我躲进挑剔的人群<br>夜一深就找那颗星星</div>
+    <div>我好像在哪见过你<br>我好像在哪见过你<br>我好像在哪见过你<br>我在劝我该忘了你</div>
+    <div>夜一深就找那颗星星<br>你听不到我的声音<br>怕脱口而出是你姓名<br>像确定我要遇见你<br>就像曾经交换过眼睛</div>
+</div>
+</body>
+</html>
